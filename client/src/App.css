@@ -1,0 +1,876 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ----------------------- NAV BAR CSS -------------------------- */
+
+.nav-title{
+  font-family:'Gotham Book', sans-serif;
+  font-size: 40px;
+  color: #70193D;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+
+}
+
+nav a {
+  font-family: 'Gotham Book', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  margin: 0 15px;
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover{
+  font-weight: bold;
+}
+
+.nav-Signout{
+  font-family: 'Gotham Book', sans-serif;
+  font-size: 18px;
+  background: none;
+  border: none;
+  width: 100%;
+  text-decoration: none;
+  margin: 0 15px;
+  padding-left: 20px;
+  position: relative;
+  text-decoration: none;
+  color: black;
+  border-left: 1px solid #00000043;
+}
+
+.nav-Signout:hover{
+  font-weight: bold;
+}
+
+nav a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 1px;
+  background-color: #ffffff;
+}
+
+
+nav a:hover, nav a:focus {
+  color: #70193D;
+}
+
+nav a.active {
+  color: #70193D;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-title {
+    font-size: 30px;
+  }
+  
+  nav a {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+}
+
+
+/* ----------------------- LOGIN CSS -------------------------- */
+
+.login-container{
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1350.98px) {
+  .login-container {
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .login-container {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .login-container {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .login-container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .login-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+.login-background{
+  background-color: #D9D9D9;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  
+}
+
+.login-text{
+  font-family:'Gotham Book', sans-serif;
+  font-size: 25px;
+}
+
+.login-input{
+  font-family:'Gotham Thin', sans-serif;
+  border: none;
+  line-height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.login-button{
+  color: white;
+  font-family:'Gotham Book', sans-serif;
+  border: none;
+  padding: 13px 55px;
+  border-radius: 15px;
+  background-color: #70193D;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.login-button:hover{
+  background-color: #70193db5;
+}
+
+/* ----------------------- JOBS CSS -------------------------- */
+
+
+.jobs-title{
+  font-family:'Gotham Book', sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.jobs-delete{
+  font-family:'Gotham Book', sans-serif;
+  background-color: none;
+  border: 2px solid #70193D;
+  background: none;
+  border-radius: 10px;
+}
+
+
+.jobs-delete:hover{
+  background-color: #70193da6;
+}
+
+
+.jobs-edit{
+  font-family:'Gotham Book', sans-serif;
+  background-color: none;
+  border: 2px solid #70193D;
+  background: none;
+  border-radius: 10px;
+}
+
+.jobs-edit:hover{
+  background-color: #70193da6;
+}
+
+.jobs-create{
+  font-family:'Gotham Book', sans-serif;
+  background-color: #70193D;
+  border: none;
+  color: white;
+  border-radius: 10px;
+
+}
+.jobs-create:hover{
+  background-color: #70193da6;
+}
+
+
+.jobs-list{
+  list-style-type: none; /* Remove default list dots */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.jobs-item{
+  padding: 10px 0; /* Add padding to the list items */
+}
+
+.jobs-jobName{
+  font-family:'Gotham Book', sans-serif;
+  color: #70193d;
+  font-size: 25px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.jobs-jobName:hover{
+  color: #70193d;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.jobs-viewApp{
+  border-radius: 15px;
+  background: none;
+  border: 1px solid #70193d;
+  padding: 3px 10px;
+}
+
+
+.jobs-viewApp:hover{
+  color: white;
+  background-color: #70193D;
+}
+
+.jobs-category{
+  font-family:'Gotham Book', sans-serif;
+  color: #000000;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.jobs-location{
+  font-family:'Gotham Book', sans-serif;
+  color: #000000;
+  font-size: 20px;
+
+  
+}
+
+.jobs-checkbox{
+ 
+    width: 1.5em;
+    height: 2rem;
+    accent-color: #70193D;
+
+  
+ 
+      border-radius: 1rem;
+    
+    
+}
+
+.jobs-divider {
+  border: 0; /* Remove default border styling */
+  border-top: 1px solid black; /* Add black horizontal line */
+  margin: 0; /* Remove default margin */
+}
+
+/* ----------------------- HOME CSS -------------------------- */
+
+.home{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../public/images/background2.jpg');
+  padding-bottom: 10%;
+}
+
+
+.home-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+
+.home-content {
+  position: relative;
+  z-index: 1;
+   /* Adjust opacity as needed */
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1500px;
+}
+
+
+
+.home-hello{
+  color: #989898;
+  font-size: 5em;
+  margin-top: 2em;
+  
+}
+
+.home-judges{
+  color: #989898;
+  font-size: 5em;
+  
+  
+}
+
+.home-intro{
+  margin-top: 11em;
+  font-size: 16px;
+  color: #989898;
+}
+
+.home-intro2{
+
+  font-size: 16px;
+  color: #989898;
+}
+
+.home-intro3{
+
+  font-size: 19px;
+  color: #989898;
+}
+
+
+
+.home-but{
+  padding: 20px 60px;
+  font-size: 15px;
+  background-color: #d9d9d94c;
+  margin-top: 5%;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  
+}
+
+.home-but:hover{
+    background-color: #d9d9d900;
+    box-shadow: none;
+    border: 1px solid #989898;
+}
+
+
+.home-example{
+  color: white;
+  font-size: 15px;
+}
+
+
+
+
+.home-label{
+  font-size: 60px;
+  color: #989898;
+
+}
+
+.home-divider{
+  border: 0; /* Remove default border styling */
+  border-top: 1px solid white; /* Add black horizontal line */
+  margin: 0; /* Remove default margin */
+}
+
+.home-img {
+  height: 900px; /* Default height for large screens */
+ 
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .home-img {
+    height: 800px;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .home-img {
+    height: 800px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .home-img {
+    height: 600px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .home-img {
+    height: 450px;
+  }
+}
+
+
+/* ----------------------- CREATE CSS -------------------------- */
+
+
+
+.create-container {
+  padding-left: 23%;
+  padding-right: 23%;
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .create-container {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .create-container {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .create-container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .create-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+.create-name{
+  font-family:'Gotham Thin', sans-serif;
+  border: none;
+  line-height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.create-dropdown{
+  font-family:'Gotham Thin', sans-serif;
+  border: none;
+  width: 300px;
+  background-color: #ffffff;
+  line-height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.create-textarea{
+  font-family:'Gotham Thin', sans-serif;
+  border: none;
+  line-height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  height: 200px;
+  width: 300px;
+}
+
+.create-DeadlineContainer{
+  background-color: white;
+  width: 300px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.create-deadlineDate{
+  padding-left: 5px;
+  background-color: none;
+  background: none;
+  border:none;
+  font-family:'Gotham Book', sans-serif;
+  font-weight: 600;
+}
+
+.create-deadlineLabel{
+  font-family:'Gotham Thin', sans-serif;
+ 
+  border: none;
+  line-height: 30px;
+  
+  
+}
+
+/* ----------------------- JOB DETAILS CSS -------------------------- */
+
+
+.details-title{
+  font-family:'Gotham Book', sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.details-name{
+  font-family:'Gotham Book', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: #70193D;
+}
+
+.details-category{
+  font-family:'Gotham Light', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+
+.details-location{
+  font-family:'Gotham Book', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #70193D;
+}
+
+.details-label{
+  font-family:'Gotham Book', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.details-label2{
+  font-family:'Gotham Book', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.details-deadLine{
+  font-family:'Gotham Light', sans-serif;
+  font-size: 25px;
+  font-weight: 200;
+  color: #000000;
+}
+
+
+.details-description{
+  font-family:'Gotham Light', sans-serif;
+  font-size: 25px;
+  font-weight: 200;
+  color: #000000;
+}
+
+.details-applyLabel{
+  font-family:'Gotham Light', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: #70193D;
+}
+
+.details-applyBox{
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.details-appName{
+  font-family:'Gotham Thin', sans-serif;
+  border: none;
+  line-height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+
+}
+
+
+.details-appEmail{
+  font-family:'Gotham Thin', sans-serif;
+  border: none;
+  line-height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+ 
+}
+
+
+.details-container{
+background-color: white;
+width: 500px;
+border-radius: 5px;
+
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .details-container{
+    background-color: white;
+    width: 400px;
+    border-radius: 5px;
+    
+    }
+}
+
+
+
+
+.details-coverLetterLabel{
+  font-family:'Gotham Thin', sans-serif;
+  border: none;
+  line-height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.details-resumeLabel {
+  font-family:'Gotham Thin', sans-serif;
+  border: none;
+  line-height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.details-applyBut{
+  font-family:'Gotham Book', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  border: none;
+  background-color: #70193D;
+  border-radius: 15px;
+  padding: 5px 30px;
+
+}
+
+/* ----------------------- APPLICANT CSS -------------------------- */
+
+.applicant-jobname{
+
+  font-family:'Gotham Book', sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  color: #70193D;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 30px;
+
+}
+
+.applicant-delete{
+
+  background-color: #70193D;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 20px;
+  
+}
+
+.applicant-name{
+  font-family:'Gotham Book', sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+  color: #70193D;
+  border: none;
+
+
+}
+
+.applicant-email{
+
+  font-family:'Gotham Light', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000000;
+  border: none;
+
+  
+}
+
+
+.applicant-butt{
+  background-color: none;
+  color: #000000;
+  background: none;
+  border: 2px solid #70193D ;
+  border-radius: 15px;
+  padding: 5px 20px;
+  
+
+}
+
+.applicant-date{
+
+  font-family:'Gotham Book', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000000;
+  border: none;
+}
+
+
+/* BARLOW FONT */
+
+.barlow-thin {
+  font-family: "Barlow", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.barlow-extralight {
+  font-family: "Barlow", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.barlow-light {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.barlow-regular {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.barlow-medium {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.barlow-semibold {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.barlow-bold {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.barlow-extrabold {
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.barlow-black {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.barlow-thin-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.barlow-extralight-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.barlow-light-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.barlow-regular-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.barlow-medium-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.barlow-semibold-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.barlow-bold-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.barlow-extrabold-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.barlow-black-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
